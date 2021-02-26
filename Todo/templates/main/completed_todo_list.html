@@ -1,0 +1,46 @@
+<!DOCTYPE html> {% load static %}
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="{% static 'css/completed_todo_list.css' %}" />
+    <title>Hello Django</title>
+</head>
+
+<body id="body">
+    <div id="todoBody">
+        <div id="listNameBackground">
+            <h1 id="listName">Todo list</h1>
+        </div>
+        <div id="listBody">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Number</th>
+                        <th>Created</th>
+                        <th>Due to</th>
+                        <th>Action</th>
+                        <th>Mark</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for todo in todos %}
+                    <tr>
+                        <td>{{todo.number}}</td>
+                        <td>{{todo.created}}</td>
+                        <td>{{due_to}}</td>
+                        <td>{{todo.action}}</td>
+                        <td>
+                            <p class="completed">Completed</p>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>
