@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="{% static 'css/todos.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/completed_todo_list.css' %}" />
     <title>Hello Django</title>
 </head>
 
@@ -28,9 +28,11 @@
                     <tr>
                         <td>{{todo.number}}</td>
                         <td>{{todo.created}}</td>
-                        <td>{{todo.due_to}}</td>
+                        <td>{{todo.dueTo}}</td>
                         <td>{{todo.action}}</td>
-                        <td><button class="todoButton">Done</button></td>
+                        <td>
+                            <p class="completed">Completed</p>
+                        </td>
                     </tr>
                     {% endfor %}
                 </tbody>
